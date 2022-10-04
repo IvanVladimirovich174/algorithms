@@ -5,7 +5,7 @@ public class SelectionSort {
             minIndex = i;
 
             for (int j = i + 1; j < array.length; j++) {
-                if (array[minIndex] > array[j]) {
+                if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
             }

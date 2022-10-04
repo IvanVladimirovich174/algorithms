@@ -7,6 +7,7 @@ public class Main {
         System.out.print("Введите целое число n, размер массива: ");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
+        System.out.println();
 
         //BubbleSort
         int[] mBubbleSort = RandomArray.createRandomArray(n);
@@ -29,5 +30,13 @@ public class Main {
         System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSort));
         SelectionSort.sort(mSelectionSort);
         System.out.println("Отсортированный массив: " + Arrays.toString(mSelectionSort));
+
+        System.out.println();
+
+        //SelectionSortRecursive
+        int[] mSelectionSortRecursive = RandomArray.createRandomArray(n);
+        System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSortRecursive));
+        SelectionSortRecursive.sort(mSelectionSortRecursive, 0, n);
+        System.out.println("Отсортированный массив: " + Arrays.toString(mSelectionSortRecursive));
     }
 }
