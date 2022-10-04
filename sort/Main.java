@@ -21,5 +21,13 @@ public class Main {
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSortRecursive));
         BubbleSortRecursive.sort(mBubbleSortRecursive, n);
         System.out.println("Отсортированный массив: " + Arrays.toString(mBubbleSortRecursive));
+
+        System.out.println();
+
+        //SelectionSort
+        int[] mSelectionSort = RandomArray.createRandomArray(n);
+        System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSort));
+        SelectionSort.sort(mSelectionSort);
+        System.out.println("Отсортированный массив: " + Arrays.toString(mSelectionSort));
     }
 }
