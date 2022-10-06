@@ -14,7 +14,6 @@ public class Main {
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSort));
         BubbleSort.sort(mBubbleSort);
         System.out.println("Отсортированный массив: " + Arrays.toString(mBubbleSort));
-
         System.out.println();
 
         //BubbleSortRecursive
@@ -22,7 +21,6 @@ public class Main {
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSortRecursive));
         BubbleSortRecursive.sort(mBubbleSortRecursive, n);
         System.out.println("Отсортированный массив: " + Arrays.toString(mBubbleSortRecursive));
-
         System.out.println();
 
         //SelectionSort
@@ -30,7 +28,6 @@ public class Main {
         System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSort));
         SelectionSort.sort(mSelectionSort);
         System.out.println("Отсортированный массив: " + Arrays.toString(mSelectionSort));
-
         System.out.println();
 
         //SelectionSortRecursive
@@ -38,5 +35,13 @@ public class Main {
         System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSortRecursive));
         SelectionSortRecursive.sort(mSelectionSortRecursive, 0, n);
         System.out.println("Отсортированный массив: " + Arrays.toString(mSelectionSortRecursive));
+        System.out.println();
+
+        //InsertionSort
+        int[] mInsertionSort = RandomArray.createRandomArray(n);
+        System.out.println("Первоначальный массив: " + Arrays.toString(mInsertionSort));
+        InsertionSort.sort(mInsertionSort);
+        System.out.println("Отсортированный массив: " + Arrays.toString(mInsertionSort));
+        System.out.println();
     }
 }
