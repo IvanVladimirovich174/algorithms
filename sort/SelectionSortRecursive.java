@@ -1,5 +1,4 @@
 public class SelectionSortRecursive {
-
     public static void sort(int[] array, int low, int high) {
         if (low < high - 1) {
             int minIndex = low;
