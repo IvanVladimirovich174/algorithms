@@ -43,5 +43,12 @@ public class Main {
         InsertionSort.sort(mInsertionSort);
         System.out.println("Отсортированный массив: " + Arrays.toString(mInsertionSort));
         System.out.println();
+
+        //QuickSort
+        int[] mQuickSort = RandomArray.createRandomArray(n);
+        System.out.println("Первоначальный массив: " + Arrays.toString(mQuickSort));
+        QuickSort.sort(mQuickSort);
+        System.out.println("Отсортированный массив: " + Arrays.toString(mQuickSort));
+        System.out.println();
     }
 }
