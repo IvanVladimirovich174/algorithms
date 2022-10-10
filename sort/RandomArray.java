@@ -1,3 +1,5 @@
+package sort;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomArray {

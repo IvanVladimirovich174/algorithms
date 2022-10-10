@@ -1,9 +1,12 @@
+package sort;
+
 public class QuickSort {
     public static void sort(int[] array) {
         qSort(array, 0, array.length - 1);
     }
 
     private static void qSort(int[] array, int low, int high) {
+
         if (low < high) {
             int pi = partition(array, low, high);
             qSort(array, low, pi - 1);
