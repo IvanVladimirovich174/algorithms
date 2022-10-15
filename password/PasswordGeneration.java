@@ -2,7 +2,7 @@ package password;
 
 import java.security.SecureRandom;
 
-public class GenerationPassword {
+public class PasswordGeneration {
 
     public static char[] generate(int n) {
 
