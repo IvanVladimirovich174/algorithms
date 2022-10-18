@@ -6,7 +6,6 @@ public class QuickSort {
     }
 
     private static void qSort(int[] array, int low, int high) {
-
         if (low < high) {
             int pi = partition(array, low, high);
             qSort(array, low, pi - 1);
@@ -15,7 +14,6 @@ public class QuickSort {
     }
 
     private static int partition(int[] array, int low, int high) {
-
         int pivot = array[high];
         int i = low - 1;
 

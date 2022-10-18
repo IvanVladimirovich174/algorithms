@@ -4,7 +4,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomArray {
     public static int[] createRandomArray(int n) {
-
         int[] m = new int[n];
 
         for (int i = 0; i < n; i++) {

@@ -2,7 +2,6 @@ package sort;
 
 public class BubbleSortRecursive {
     public static void sort(int[] array, int length) {
-
         if (length == 1) {
             return;
         }
@@ -16,7 +15,6 @@ public class BubbleSortRecursive {
                 isSort = false;
             }
         }
-
         if (!isSort) {
             sort(array, length - 1);
         }
