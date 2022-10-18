@@ -5,7 +5,6 @@ import java.security.SecureRandom;
 public class PasswordGeneration {
 
     public static char[] generate(int n) {
-
         final char[] SPECIAL_CHARS = {'*', '-', '_'};
         char[] pass = new char[n];
         SecureRandom sr = new SecureRandom();
@@ -34,7 +33,6 @@ public class PasswordGeneration {
             pass[i] = pass[randomIndex];
             pass[randomIndex] = tmp;
         }
-
         return pass;
     }
 }
