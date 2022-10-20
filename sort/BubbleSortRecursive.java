@@ -6,16 +6,16 @@ public class BubbleSortRecursive {
             return;
         }
 
-        boolean isSort = true;
+        boolean isSorted = true;
         for (int i = 0; i < length - 1; i++) {
             if (array[i] > array[i + 1]) {
                 int tmp = array[i];
                 array[i] = array[i + 1];
                 array[i + 1] = tmp;
-                isSort = false;
+                isSorted = false;
             }
         }
-        if (!isSort) {
+        if (!isSorted) {
             sort(array, length - 1);
         }
     }
