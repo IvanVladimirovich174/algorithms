@@ -1,6 +1,5 @@
 package search;
 
-import sort.RandomArray;
 import java.util.Arrays;
 import java.util.Scanner;
 
