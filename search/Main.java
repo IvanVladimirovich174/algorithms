@@ -1,5 +1,7 @@
 package search;
 
+import sort.SelectionSort;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -9,8 +11,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
+        //binary search
         int[] binarySearch = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(binarySearch));
+        SelectionSort.sort(binarySearch);
+        System.out.println("Отсортированный массив" + Arrays.toString(binarySearch));
 
         System.out.print("Введите целое число, которое необходимо найти: ");
         int key = scanner.nextInt();
