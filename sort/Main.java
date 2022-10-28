@@ -14,8 +14,10 @@ public class Main {
         //BubbleSort
         int[] mBubbleSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSort));
-        BubbleSort.sort(mBubbleSort);
-        System.out.println("Отсортированный массив: " + Arrays.toString(mBubbleSort));
+        BubbleSort.ascendingSort(mBubbleSort);
+        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mBubbleSort));
+        BubbleSort.desccendingSort(mBubbleSort);
+        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mBubbleSort));
         System.out.println();
 
         //BubbleSortRecursive
