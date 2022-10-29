@@ -16,15 +16,17 @@ public class Main {
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSort));
         BubbleSort.ascendingSort(mBubbleSort);
         System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mBubbleSort));
-        BubbleSort.desccendingSort(mBubbleSort);
+        BubbleSort.descendingSort(mBubbleSort);
         System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mBubbleSort));
         System.out.println();
 
         //BubbleSortRecursive
         int[] mBubbleSortRecursive = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSortRecursive));
-        BubbleSortRecursive.sort(mBubbleSortRecursive, n);
-        System.out.println("Отсортированный массив: " + Arrays.toString(mBubbleSortRecursive));
+        BubbleSortRecursive.ascendingSort(mBubbleSortRecursive, n);
+        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mBubbleSortRecursive));
+        BubbleSortRecursive.descendingSort(mBubbleSortRecursive, n);
+        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mBubbleSortRecursive));
         System.out.println();
 
         //SelectionSort
