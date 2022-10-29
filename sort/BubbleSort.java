@@ -20,7 +20,7 @@ public class BubbleSort {
         }
     }
 
-    public static void desccendingSort(int[] array) {
+    public static void descendingSort(int[] array) {
         boolean isSorted;
 
         for (int i = 0; i < array.length - 1; i++) {
