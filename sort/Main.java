@@ -46,8 +46,10 @@ public class Main {
         //InsertionSort
         int[] mInsertionSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mInsertionSort));
-        InsertionSort.sort(mInsertionSort);
-        System.out.println("Отсортированный массив: " + Arrays.toString(mInsertionSort));
+        InsertionSort.ascendingSort(mInsertionSort);
+        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mInsertionSort));
+        InsertionSort.descendingSort(mInsertionSort);
+        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mInsertionSort));
         System.out.println();
 
         //QuickSort
