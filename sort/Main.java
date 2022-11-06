@@ -11,13 +11,24 @@ public class Main {
         int n = scanner.nextInt();
         System.out.println();
 
+        long startTime;
+        long stopTime;
+
         //BubbleSort
         int[] mBubbleSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSort));
+
+        startTime = System.nanoTime();
         BubbleSort.ascendingSort(mBubbleSort);
+        stopTime = System.nanoTime();
         System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mBubbleSort));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+
+        startTime = System.nanoTime();
         BubbleSort.descendingSort(mBubbleSort);
+        stopTime = System.nanoTime();
         System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mBubbleSort));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
         //BubbleSortRecursive
