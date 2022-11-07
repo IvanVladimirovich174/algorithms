@@ -34,10 +34,18 @@ public class Main {
         //BubbleSortRecursive
         int[] mBubbleSortRecursive = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSortRecursive));
+
+        startTime = System.nanoTime();
         BubbleSortRecursive.ascendingSort(mBubbleSortRecursive, n);
+        stopTime = System.nanoTime();
         System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mBubbleSortRecursive));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+
+        startTime = System.nanoTime();
         BubbleSortRecursive.descendingSort(mBubbleSortRecursive, n);
+        stopTime = System.nanoTime();
         System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mBubbleSortRecursive));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
         //SelectionSort
