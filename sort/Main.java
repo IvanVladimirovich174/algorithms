@@ -51,15 +51,23 @@ public class Main {
         //SelectionSort
         int[] mSelectionSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSort));
+
+        startTime = System.nanoTime();
         SelectionSort.sort(mSelectionSort);
-        System.out.println("Отсортированный массив: " + Arrays.toString(mSelectionSort));
+        stopTime = System.nanoTime();
+        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mSelectionSort));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
         //SelectionSortRecursive
         int[] mSelectionSortRecursive = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSortRecursive));
+
+        startTime = System.nanoTime();
         SelectionSortRecursive.sort(mSelectionSortRecursive, 0, n);
-        System.out.println("Отсортированный массив: " + Arrays.toString(mSelectionSortRecursive));
+        stopTime = System.nanoTime();
+        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mSelectionSortRecursive));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
         //InsertionSort
