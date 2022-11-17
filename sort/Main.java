@@ -55,7 +55,7 @@ public class Main {
         startTime = System.nanoTime();
         SelectionSort.sort(mSelectionSort);
         stopTime = System.nanoTime();
-        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mSelectionSort));
+        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mSelectionSort));
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
@@ -66,24 +66,37 @@ public class Main {
         startTime = System.nanoTime();
         SelectionSortRecursive.sort(mSelectionSortRecursive, 0, n);
         stopTime = System.nanoTime();
-        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mSelectionSortRecursive));
+        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mSelectionSortRecursive));
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
         //InsertionSort
         int[] mInsertionSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mInsertionSort));
+
+        startTime = System.nanoTime();
         InsertionSort.ascendingSort(mInsertionSort);
+        stopTime = System.nanoTime();
         System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mInsertionSort));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+        System.out.println();
+
+        startTime = System.nanoTime();
         InsertionSort.descendingSort(mInsertionSort);
+        stopTime = System.nanoTime();
         System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mInsertionSort));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
         //QuickSort
         int[] mQuickSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mQuickSort));
+
+        startTime = System.nanoTime();
         QuickSort.sort(mQuickSort);
-        System.out.println("Отсортированный массив: " + Arrays.toString(mQuickSort));
+        startTime = System.nanoTime();
+        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mQuickSort));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
     }
 }
