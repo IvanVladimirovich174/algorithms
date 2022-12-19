@@ -14,7 +14,7 @@ public class Main {
         long startTime;
         long stopTime;
 
-        //BubbleSort
+        // BubbleSort
         int[] mBubbleSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSort));
 
@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
-        //BubbleSortRecursive
+        // BubbleSortRecursive
         int[] mBubbleSortRecursive = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSortRecursive));
 
@@ -48,7 +48,7 @@ public class Main {
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
-        //SelectionSort
+        // SelectionSort
         int[] mSelectionSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSort));
 
@@ -59,7 +59,7 @@ public class Main {
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
-        //SelectionSortRecursive
+        // SelectionSortRecursive
         int[] mSelectionSortRecursive = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSortRecursive));
 
@@ -70,7 +70,7 @@ public class Main {
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
-        //InsertionSort
+        // InsertionSort
         int[] mInsertionSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mInsertionSort));
 
@@ -88,14 +88,25 @@ public class Main {
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
-        //QuickSort
+        // QuickSort
         int[] mQuickSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mQuickSort));
 
         startTime = System.nanoTime();
         QuickSort.sort(mQuickSort);
-        startTime = System.nanoTime();
+        stopTime = System.nanoTime();
         System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mQuickSort));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+        System.out.println();
+
+        // RadixSort
+        int[] mRadixSort = RandomArray.createRandomArray(n);
+        System.out.println("Первоначальный массив: " + Arrays.toString(mRadixSort));
+
+        startTime = System.nanoTime();
+        RadixSort.radixSort(mRadixSort);
+        stopTime = System.nanoTime();
+        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mRadixSort));
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
     }
