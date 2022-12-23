@@ -27,8 +27,9 @@ public class BubbleSort {
 
         long stopTime = System.nanoTime();
 
-        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(array));
+        System.out.println("Отсортированный массив в порядке возрастания [сортировка пузырьком]: " + Arrays.toString(array));
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+        System.out.println();
     }
 
     public static void descendingSort(int[] array) {
@@ -55,7 +56,8 @@ public class BubbleSort {
 
         long stopTime = System.nanoTime();
 
-        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(array));
+        System.out.println("Отсортированный массив в порядке убывания [сортировка пузырьком]: " + Arrays.toString(array));
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+        System.out.println();
     }
 }

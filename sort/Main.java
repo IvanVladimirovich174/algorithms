@@ -26,26 +26,21 @@ public class Main {
         startTime = System.nanoTime();
         BubbleSortRecursive.ascendingSort(mBubbleSortRecursive, n);
         stopTime = System.nanoTime();
-        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mBubbleSortRecursive));
+        System.out.println("Отсортированный массив в порядке возрастания [сортировка пузырьком рекурсивно]: " + Arrays.toString(mBubbleSortRecursive));
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+        System.out.println();
 
+        System.out.println("Первоначальный массив: " + Arrays.toString(mBubbleSortRecursive));
         startTime = System.nanoTime();
         BubbleSortRecursive.descendingSort(mBubbleSortRecursive, n);
         stopTime = System.nanoTime();
-        System.out.println("Отсортированный массив в порядке убывания: " + Arrays.toString(mBubbleSortRecursive));
+        System.out.println("Отсортированный массив в порядке убывания [сортировка пузырьком рекурсивно]: " + Arrays.toString(mBubbleSortRecursive));
         System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
         System.out.println();
 
         // SelectionSort
         int[] mSelectionSort = RandomArray.createRandomArray(n);
-        System.out.println("Первоначальный массив: " + Arrays.toString(mSelectionSort));
-
-        startTime = System.nanoTime();
         SelectionSort.sort(mSelectionSort);
-        stopTime = System.nanoTime();
-        System.out.println("Отсортированный массив в порядке возрастания: " + Arrays.toString(mSelectionSort));
-        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
-        System.out.println();
 
         // SelectionSortRecursive
         int[] mSelectionSortRecursive = RandomArray.createRandomArray(n);
