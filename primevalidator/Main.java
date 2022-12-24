@@ -8,7 +8,7 @@ public class Main {
         };
 
         for (int primeNumber : primeNumbers) {
-            if (profilemodule.sixthhometaskadditional.task2.PrimeValidator.isPrimeNumber(primeNumber)) {
+            if (PrimeValidator.isPrimeNumber(primeNumber)) {
                 System.out.println("Number " + primeNumber + " is prime number");
             }
         }
@@ -19,7 +19,7 @@ public class Main {
         };
 
         for (int notPrimeNumber : notPrimeNumbers) {
-            if (!profilemodule.sixthhometaskadditional.task2.PrimeValidator.isPrimeNumber(notPrimeNumber)) {
+            if (!PrimeValidator.isPrimeNumber(notPrimeNumber)) {
                 System.out.println("Number " + notPrimeNumber + " isn't prime number");
             }
         }
