@@ -1,4 +1,4 @@
-package profilemodule.thirdhometask.task4;
+package getallinterfaces;
 
 public interface G extends H {
 }

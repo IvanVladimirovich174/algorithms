@@ -1,4 +1,4 @@
-package profilemodule.thirdhometask.task4;
+package getallinterfaces;
 
 import java.util.Set;
 

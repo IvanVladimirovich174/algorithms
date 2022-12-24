@@ -1,4 +1,4 @@
-package profilemodule.thirdhometask.task4;
+package getallinterfaces;
 
 public class B extends A implements D {
 }
