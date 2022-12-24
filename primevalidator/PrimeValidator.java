@@ -1,4 +1,4 @@
-package profilemodule.sixthhometaskadditional.task2;
+package primevalidator;
 
 public class PrimeValidator {
     public static boolean isPrimeNumber(int number) {

@@ -1,4 +1,4 @@
-package profilemodule.sixthhometaskadditional.task2;
+package primevalidator;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Main {
         };
 
         for (int primeNumber : primeNumbers) {
-            if (PrimeValidator.isPrimeNumber(primeNumber)) {
+            if (profilemodule.sixthhometaskadditional.task2.PrimeValidator.isPrimeNumber(primeNumber)) {
                 System.out.println("Number " + primeNumber + " is prime number");
             }
         }
@@ -19,7 +19,7 @@ public class Main {
         };
 
         for (int notPrimeNumber : notPrimeNumbers) {
-            if (!PrimeValidator.isPrimeNumber(notPrimeNumber)) {
+            if (!profilemodule.sixthhometaskadditional.task2.PrimeValidator.isPrimeNumber(notPrimeNumber)) {
                 System.out.println("Number " + notPrimeNumber + " isn't prime number");
             }
         }
