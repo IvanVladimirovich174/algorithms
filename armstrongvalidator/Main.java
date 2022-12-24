@@ -1,4 +1,4 @@
-package profilemodule.sixthhometaskadditional.task1;
+package armstrongvalidator;
 
 public class Main {
     public static void main(String[] args) {

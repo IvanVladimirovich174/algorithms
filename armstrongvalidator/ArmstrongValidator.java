@@ -1,4 +1,4 @@
-package profilemodule.sixthhometaskadditional.task1;
+package armstrongvalidator;
 
 public class ArmstrongValidator {
     public static boolean isArmstrongNumber(int number) {
