@@ -1,4 +1,4 @@
-package reflection.getclassandsuperclassesinterfaces;
+package getclassandsuperclassesinterfaces;
 
 public class Main {
     public static void main(String[] args) {

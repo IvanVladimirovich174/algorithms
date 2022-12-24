@@ -1,4 +1,4 @@
-package reflection.getclassandsuperclassesinterfaces;
+package getclassandsuperclassesinterfaces;
 
 import java.util.ArrayList;
 import java.util.Arrays;

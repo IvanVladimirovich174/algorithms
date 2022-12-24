@@ -1,4 +1,4 @@
-package reflection.getclassandsuperclassesinterfaces;
+package getclassandsuperclassesinterfaces;
 
 public interface G extends H {
 }
