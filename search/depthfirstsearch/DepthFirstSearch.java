@@ -1,4 +1,4 @@
-package search;
+package search.depthfirstsearch;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class DepthFirstSearch {
     public static void main(String[] args) {
-        Graph graph = new Graph();
+        search.breadthfirstsearch.Graph graph = new search.breadthfirstsearch.Graph();
         graph.maxComponent();
     }
 }
