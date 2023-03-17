@@ -66,6 +66,25 @@ public class Main {
         InsertionSort.ascendingSort(mInsertionSort);
         InsertionSort.descendingSort(mInsertionSort);
 
+        // InsertionSortRecursive
+        int[] mInsertionSortRecursive = RandomArray.createRandomArray(n);
+
+        System.out.println("Первоначальный массив: " + Arrays.toString(mInsertionSortRecursive));
+        startTime = System.nanoTime();
+        InsertionSortRecursive.ascendingSort(mInsertionSortRecursive, 0, n);
+        stopTime = System.nanoTime();
+        System.out.println("Отсортированный массив в порядке возрастания [сортировка вставками рекурсивно]: " + Arrays.toString(mInsertionSortRecursive));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+        System.out.println();
+
+        System.out.println("Первоначальный массив: " + Arrays.toString(mInsertionSortRecursive));
+        startTime = System.nanoTime();
+        SelectionSortRecursive.descendingSort(mInsertionSortRecursive, 0, n);
+        stopTime = System.nanoTime();
+        System.out.println("Отсортированный массив в порядке убывания [сортировка вставками рекурсивно]: " + Arrays.toString(mInsertionSortRecursive));
+        System.out.println("Время сортировки заняло: " + (double) (stopTime - startTime) / 1_000_000_000);
+        System.out.println();
+
         // QuickSort
         int[] mQuickSort = RandomArray.createRandomArray(n);
         System.out.println("Первоначальный массив: " + Arrays.toString(mQuickSort));
