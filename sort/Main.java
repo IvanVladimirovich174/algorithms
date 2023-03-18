@@ -87,8 +87,8 @@ public class Main {
 
         // QuickSort
         int[] mQuickSort = RandomArray.createRandomArray(n);
-        System.out.println("Первоначальный массив: " + Arrays.toString(mQuickSort));
 
+        System.out.println("Первоначальный массив: " + Arrays.toString(mQuickSort));
         startTime = System.nanoTime();
         QuickSort.sort(mQuickSort);
         stopTime = System.nanoTime();
@@ -98,8 +98,8 @@ public class Main {
 
         // RadixSort
         int[] mRadixSort = RandomArray.createRandomArray(n);
-        System.out.println("Первоначальный массив: " + Arrays.toString(mRadixSort));
 
+        System.out.println("Первоначальный массив: " + Arrays.toString(mRadixSort));
         startTime = System.nanoTime();
         RadixSort.radixSort(mRadixSort);
         stopTime = System.nanoTime();
