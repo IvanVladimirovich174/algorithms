@@ -31,8 +31,10 @@ class Graph {
         dist = new int[N][N];
         vertexes = new ArrayList[N];
         vis = new visited[N];
+
         for (int i = 0; i < N; i++)
             vertexes[i] = new ArrayList<>();
+
         vis[0].vv = new boolean[N];
         for (int i = 0; i < M; i++) {
             int u = in.nextInt();
