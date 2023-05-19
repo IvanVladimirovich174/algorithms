@@ -6,8 +6,7 @@ import java.util.Stack;
 
 public class DepthFirstSearch {
     public static void main(String[] args) {
-        search.breadthfirstsearch.Graph graph = new search.breadthfirstsearch.Graph();
-        graph.maxComponent();
+
     }
 }
 
