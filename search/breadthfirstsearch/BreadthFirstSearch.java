@@ -11,7 +11,7 @@ public class BreadthFirstSearch {
     }
 }
 
-class visited {
+class Visited {
     static boolean[] vv;
 }
 
@@ -20,7 +20,7 @@ class Graph {
     int M;
     int K;
     private ArrayList<Integer> vertexes[];
-    private visited vis[];
+    private Visited vis[];
     private int dist[][];
     LinkedList<Integer> queue = new LinkedList<Integer>();
 
@@ -30,27 +30,31 @@ class Graph {
         this.M = in.nextInt();
         dist = new int[N][N];
         vertexes = new ArrayList[N];
-        vis = new visited[N];
+        vis = new Visited[N];
 
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < N; ++i) {
             vertexes[i] = new ArrayList<>();
+        }
 
         vis[0].vv = new boolean[N];
-        for (int i = 0; i < M; i++) {
+
+        for (int i = 0; i < M; ++i) {
             int u = in.nextInt();
             int v = in.nextInt();
             vertexes[u].add(v);
             vertexes[v].add(u);
         }
+
         this.K = in.nextInt();
-        for (int i = 0; i < K; i++) {
+
+        for (int i = 0; i < K; ++i) {
             int a = in.nextInt();
             BFS(a, i);
         }
     }
 
     void BFS(int ctrl, int ind) {
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; ++i) {
             vis[0].vv[i] = false;
             dist[ind][i] = -1;
         }
@@ -70,6 +74,7 @@ class Graph {
 
     public void listMaker() {
         StringBuilder str = new StringBuilder();
+
         for (int i = 0; i < N; i++) {
             boolean flag = true;
             for (int j = 1; j < K; j++) {
@@ -80,7 +85,11 @@ class Graph {
             }
             if (flag) str.append(i + " ");
         }
-        if (str.length() == 0) System.out.println("-");
-        else System.out.println(str);
+
+        if (str.length() == 0) {
+            System.out.println("-");
+        } else {
+            System.out.println(str);
+        }
     }
 }
