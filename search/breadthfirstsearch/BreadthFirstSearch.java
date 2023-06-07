@@ -16,9 +16,9 @@ class Visited {
 }
 
 class Graph {
-    int N;
-    int M;
-    int K;
+    int n;
+    int m;
+    int k;
     private ArrayList<Integer> vertexes[];
     private Visited vis[];
     private int dist[][];
@@ -26,35 +26,35 @@ class Graph {
 
     Graph() {
         Scanner in = new Scanner(System.in);
-        this.N = in.nextInt();
-        this.M = in.nextInt();
-        dist = new int[N][N];
-        vertexes = new ArrayList[N];
-        vis = new Visited[N];
+        this.n = in.nextInt();
+        this.m = in.nextInt();
+        dist = new int[n][n];
+        vertexes = new ArrayList[n];
+        vis = new Visited[n];
 
-        for (int i = 0; i < N; ++i) {
+        for (int i = 0; i < n; ++i) {
             vertexes[i] = new ArrayList<>();
         }
 
-        vis[0].vv = new boolean[N];
+        vis[0].vv = new boolean[n];
 
-        for (int i = 0; i < M; ++i) {
+        for (int i = 0; i < m; ++i) {
             int u = in.nextInt();
             int v = in.nextInt();
             vertexes[u].add(v);
             vertexes[v].add(u);
         }
 
-        this.K = in.nextInt();
+        this.k = in.nextInt();
 
-        for (int i = 0; i < K; ++i) {
+        for (int i = 0; i < k; ++i) {
             int a = in.nextInt();
             BFS(a, i);
         }
     }
 
     void BFS(int ctrl, int ind) {
-        for (int i = 0; i < N; ++i) {
+        for (int i = 0; i < n; ++i) {
             vis[0].vv[i] = false;
             dist[ind][i] = -1;
         }
@@ -75,9 +75,9 @@ class Graph {
     public void listMaker() {
         StringBuilder str = new StringBuilder();
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             boolean flag = true;
-            for (int j = 1; j < K; j++) {
+            for (int j = 1; j < k; j++) {
                 if (dist[j - 1][i] != dist[j][i] || dist[j][i] == -1) {
                     flag = false;
                     break;
