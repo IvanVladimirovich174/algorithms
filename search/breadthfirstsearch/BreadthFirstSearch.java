@@ -19,9 +19,9 @@ class Graph {
     int n;
     int m;
     int k;
-    private ArrayList<Integer> vertexes[];
-    private Visited vis[];
-    private int dist[][];
+    private ArrayList<Integer>[] vertexes;
+    private Visited[] vis;
+    private int[][] dist;
     LinkedList<Integer> queue = new LinkedList<Integer>();
 
     Graph() {
@@ -63,12 +63,13 @@ class Graph {
         queue.add(ctrl);
         while (!queue.isEmpty()) {
             int v = (int) queue.pop();
-            for (int i = 0; i < vertexes[v].size(); i++)
+            for (int i = 0; i < vertexes[v].size(); i++) {
                 if (!vis[0].vv[vertexes[v].get(i)]) {
                     vis[0].vv[vertexes[v].get(i)] = true;
                     queue.add(vertexes[v].get(i));
                     dist[ind][vertexes[v].get(i)] = dist[ind][v] + 1;
                 }
+            }
         }
     }
 
