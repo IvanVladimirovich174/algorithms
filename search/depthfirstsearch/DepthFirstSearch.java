@@ -11,7 +11,7 @@ public class DepthFirstSearch {
 }
 
 class Graph {
-    int N;
+    int n;
     public int counter = 0;
     int edgesL = 0;
     int vertexesL = 0;
@@ -25,15 +25,15 @@ class Graph {
 
     public Graph() {
         Scanner in = new Scanner(System.in);
-        int N = in.nextInt();
+        int n = in.nextInt();
         int M = in.nextInt();
-        this.N = N;
-        vertexes = new ArrayList[N];
-        mark = new boolean[N];
-        comp = new int[N];
-        for (int i = 0; i < N; i++)
+        this.n = Graph.this.n;
+        vertexes = new ArrayList[Graph.this.n];
+        mark = new boolean[Graph.this.n];
+        comp = new int[Graph.this.n];
+        for (int i = 0; i < Graph.this.n; ++i)
             vertexes[i] = new ArrayList<>();
-        for (int i = 0; i < M; i++) {
+        for (int i = 0; i < M; ++i) {
             int u = in.nextInt();
             int v = in.nextInt();
             if (u != v)
@@ -43,7 +43,7 @@ class Graph {
     }
 
     int getSuccessor(int v) {
-        for (int j = 0; j < vertexes[v].size(); j++)
+        for (int j = 0; j < vertexes[v].size(); ++j)
             if (!mark[vertexes[v].get(j)])
                 return vertexes[v].get(j);
         return -1;
@@ -63,14 +63,14 @@ class Graph {
             else {
                 mark[vrtx] = true;
                 comp[vrtx] = u;
-                vertexesL++;
+                ++vertexesL;
                 stack.push(vrtx);
             }
         }
     }
 
     public void maxComponent() {
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < n; ++i)
             if (!mark[i]) {
                 vertexesL = 0;
                 edgesL = 0;
@@ -83,13 +83,13 @@ class Graph {
             }
         StringBuilder str = new StringBuilder();
         str.append("graph {" + "\n");
-        for (int v = 0; v < N; v++) {
+        for (int v = 0; v < n; ++v) {
             if (comp[v] == numOfAttrib)
                 str.append(v + " [color = red]" + "\n");
             else
                 str.append(v + "\n");
         }
-        for (int v = 0; v < N; v++)
+        for (int v = 0; v < n; ++v)
             if (vertexes[v].size() > 0)
                 for (int u = 0; u < vertexes[v].size(); u++) {
                     if (v < vertexes[v].get(u)) continue;
